@@ -1,0 +1,118 @@
+Microsoft Windows [Version 10.0.19045.2846]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\Users\RND>ssh rprokopiev@192.168.0.174
+rprokopiev@192.168.0.174's password:
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+31 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+2 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Last login: Tue Apr 25 19:55:10 2023 from 192.168.0.136
+rprokopiev@rprokopiev-VirtualBox:~$ mkdir -p MidTest/PupilsToys
+rprokopiev@rprokopiev-VirtualBox:~$ cd MidTest
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ mkdir PreschoolersToys
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ cd PupilsToys
+rprokopiev@rprokopiev-VirtualBox:~/MidTest/PupilsToys$ > Robots
+rprokopiev@rprokopiev-VirtualBox:~/MidTest/PupilsToys$ touch ConstructionKit
+rprokopiev@rprokopiev-VirtualBox:~/MidTest/PupilsToys$ echo > BoardGames
+rprokopiev@rprokopiev-VirtualBox:~/MidTest/PupilsToys$ cd ..
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ cd PreschoolersToys/
+rprokopiev@rprokopiev-VirtualBox:~/MidTest/PreschoolersToys$ > SoftToys
+rprokopiev@rprokopiev-VirtualBox:~/MidTest/PreschoolersToys$ touch Dolls
+rprokopiev@rprokopiev-VirtualBox:~/MidTest/PreschoolersToys$ echo > CarToys
+rprokopiev@rprokopiev-VirtualBox:~/MidTest/PreschoolersToys$ cd ..
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ tree
+.
+├── PreschoolersToys
+│   ├── CarToys
+│   ├── Dolls
+│   └── SoftToys
+└── PupilsToys
+    ├── BoardGames
+    ├── ConstructionKit
+    └── Robots
+
+2 directories, 6 files
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ mkdir ToyName
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ tree
+.
+├── PreschoolersToys
+│   ├── CarToys
+│   ├── Dolls
+│   └── SoftToys
+├── PupilsToys
+│   ├── BoardGames
+│   ├── ConstructionKit
+│   └── Robots
+└── ToyName
+
+3 directories, 6 files
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ mv /home/rprokopiev/MidTest/PreschoolersToys /home/rprokopiev/MidTest/ToyName
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ mv /home/rprokopiev/MidTest/PupilsToys /home/rprokopiev/MidT
+est/ToyName
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ tree
+.
+└── ToyName
+    ├── PreschoolersToys
+    │   ├── CarToys
+    │   ├── Dolls
+    │   └── SoftToys
+    └── PupilsToys
+        ├── BoardGames
+        ├── ConstructionKit
+        └── Robots
+
+3 directories, 6 files
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ mv /home/rprokopiev/MidTest/ToyName /home/rprokopiev/MidTest
+/Toys
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ tree
+.
+└── Toys
+    ├── PreschoolersToys
+    │   ├── CarToys
+    │   ├── Dolls
+    │   └── SoftToys
+    └── PupilsToys
+        ├── BoardGames
+        ├── ConstructionKit
+        └── Robots
+
+3 directories, 6 files
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ ll
+total 12
+drwxrwxr-x  3 rprokopiev rprokopiev 4096 мая  3 21:01 ./
+drwxr-x--- 19 rprokopiev rprokopiev 4096 мая  3 20:38 ../
+drwxrwxr-x  4 rprokopiev rprokopiev 4096 мая  3 20:59 Toys/
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ postman --help
+Command 'postman' not found, but can be installed with:
+sudo snap install postman
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ dpkg -l postman
+dpkg-query: no packages found matching postman
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ sudo snap install postman
+[sudo] password for rprokopiev:
+postman (v10/stable) 10.13.0 from Postman, Inc. (postman-inc✓) installed
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ crontab -e
+crontab: installing new crontab
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ 
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$ crontab -l
+3 * * * * cp /home/rprokopiev/MidTest/FileToBackUP.txt > /home/rprokopiev/MidTest/BackUpFile.txt
+rprokopiev@rprokopiev-VirtualBox:~/MidTest$
