@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public abstract class PreSchoolToys extends BaseUnit{
 
-    public PreSchoolToys(ArrayList<BaseUnit> name, int id, double frequency) {
+    public PreSchoolToys(ArrayList<BaseUnit> name, Integer id, Integer frequency) {
         super(name, id, frequency);
     }
 }
