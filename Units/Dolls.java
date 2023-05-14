@@ -2,14 +2,15 @@ package Units;
 import java.util.ArrayList;
 
 public class Dolls extends PreSchoolToys{
-    
+    protected String rusName;
     public Dolls(ArrayList<BaseUnit> name){
         super(name, 2, 30);
+        this.rusName = "Кукла";
     }
 
-    // public Dolls(ArrayList<BaseUnit> name, Integer id, Integer frequency){
-    //     super(name, 2, 30);
-    // }
-
+    @Override
+    public String getInfo() {
+        return this.rusName;
+    }
 }
 

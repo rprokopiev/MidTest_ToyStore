@@ -10,23 +10,26 @@ import Units.Dolls;
 import Units.Robots;
 import Units.SoftToys;
 
-public class Init {
+public class GetToyList {
 
-    public static void WriteFile () {
+    public static ArrayList<BaseUnit> GetList () {
         Scanner scanner = new Scanner(System.in);
-        Integer playerType = View.GetRequiredIntegerFromUser("Select: 1 - PreSchooler; 2 - Schooler", scanner, 1, 2);
-        Integer toysQty = View.GetRequiredIntegerFromUser("Enter quantity of toys in game between 1 and 10", scanner, 1, 10);
+        Integer playerType = View.GetRequiredIntegerFromUser("Кто играет: 1 - Дошкольник; 2 - Школьник", scanner, 1, 2);
+        Integer toysQty = View.GetRequiredIntegerFromUser("Введите кол-во игрушек в розыгрыше от 1 до 10", scanner, 1, 10);
         ArrayList <BaseUnit> toyList = new ArrayList<BaseUnit>();
         if (playerType == 1){
             toyList = PreschArray(toysQty);
-            System.out.println(toyList);
-            System.out.println(toyList);
+            for (BaseUnit unit : toyList) {
+                System.out.println(unit.getInfo());
+            }
         }
         else{
             toyList = SchoolersArray(toysQty);
-            System.out.println(toyList);
-            System.out.println(toyList);
+            for (BaseUnit unit : toyList) {
+                System.out.println(unit.getInfo());
+            }
         }
+        return toyList;
     }
 
     private static ArrayList <BaseUnit> SchoolersArray (Integer qty){
