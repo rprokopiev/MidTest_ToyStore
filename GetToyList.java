@@ -19,15 +19,9 @@ public class GetToyList {
         ArrayList <BaseUnit> toyList = new ArrayList<BaseUnit>();
         if (playerType == 1){
             toyList = PreschArray(toysQty);
-            for (BaseUnit unit : toyList) {
-                System.out.println(unit.getInfo());
-            }
         }
         else{
             toyList = SchoolersArray(toysQty);
-            for (BaseUnit unit : toyList) {
-                System.out.println(unit.getInfo());
-            }
         }
         return toyList;
     }

@@ -10,7 +10,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         ArrayList <BaseUnit> list = GetToyList.GetList();
         Boolean check = Step.ifArrayEmpty(list);
-        try(FileWriter file = new FileWriter("Список Игрушек")){
+        try(FileWriter file = new FileWriter("Список Игрушек.txt")){
             while(check == false){
                 String i = Step.Step(list);
                 scan.nextLine();
